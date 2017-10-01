@@ -73,6 +73,4 @@ public class Metronome
             Thread.sleep(intervalTime);
         }
     }
-
-
 }

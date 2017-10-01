@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sound.gui.Controller">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -27,7 +26,7 @@
                   <Insets top="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="bmpTextField" alignment="CENTER" promptText="BMP" />
+            <TextField fx:id="bmpTextField" alignment="CENTER" onKeyReleased="#playOnKeyReleased" promptText="BMP" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
