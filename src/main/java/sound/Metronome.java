@@ -9,7 +9,8 @@ public class Metronome
 {
     private static final int KICK = 2;
     private static final int CLASH = 1;
-    private static final int NOTE = 45;
+    private static final int CLASH_NOTE = 48;
+    private static final int KICK_NOTE = 45;
     private static final int CLASH_VOLUME = 93;
     private static final int KICK_VOLUME = 93;
 
@@ -53,12 +54,12 @@ public class Metronome
     private void changeInstrumentsInChannels()
     {
         midiChannel[CLASH].programChange(12);
-        midiChannel[KICK].programChange(11);
+        midiChannel[KICK].programChange(12);
     }
 
     private void playClash() throws InterruptedException
     {
-        midiChannel[CLASH].noteOn(NOTE, CLASH_VOLUME);
+        midiChannel[CLASH].noteOn(CLASH_NOTE, CLASH_VOLUME);
         midiChannel[CLASH].allNotesOff();
         Thread.sleep(intervalTime);
     }
@@ -67,7 +68,7 @@ public class Metronome
     {
         for (int j = 0; j < 3; j++)
         {
-            midiChannel[KICK].noteOn(NOTE, KICK_VOLUME);
+            midiChannel[KICK].noteOn(KICK_NOTE, KICK_VOLUME);
             midiChannel[KICK].allNotesOff();
             Thread.sleep(intervalTime);
         }
