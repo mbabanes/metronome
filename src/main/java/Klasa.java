@@ -1,5 +1,4 @@
-package PACKAGE_NAME;
-
 public class Klasa
 {
+    private String foo;
 }
